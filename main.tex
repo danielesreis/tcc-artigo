@@ -1,0 +1,205 @@
+\documentclass[preprint,12pt]{elsarticle}
+
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{longtable}
+\usepackage{xcolor}
+\usepackage{subcaption}
+\usepackage{lscape}
+\usepackage{lineno,hyperref}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usepackage{url}
+\pgfplotsset{compat=1.9}
+\usepgfplotslibrary{groupplots} 
+\usetikzlibrary{matrix, positioning}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{subcaption}
+\modulolinenumbers[5]
+\usepackage{lineno}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{subfiles}
+\usepackage{scrextend}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+%  total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+
+\renewcommand{\baselinestretch}{1.5}
+
+% \journal{Computer and Eletronics in Agriculture}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\usepackage{pgfplots}
+\usepackage{filecontents}
+
+\pgfplotsset{
+tick label style={font=\tiny},
+label style={font=\small},
+legend style={font=\footnotesize},
+}
+
+\begin{document}
+
+% \begin{frontmatter}
+
+%% Title, authors and addresses
+
+% \title{}
+
+%% use the tnoteref command within \title for footnotes;
+%% use the tnotetext command for the associated footnote;
+%% use the fnref command within \author or \address for footnotes;
+%% use the fntext command for the associated footnote;
+%% use the corref command within \author for corresponding author footnotes;
+%% use the cortext command for the associated footnote;
+%% use the ead command for the email address,
+%% and the form \ead[url] for the home page:
+%%
+%% \title{Title\tnoteref{label1}}
+%% \tnotetext[label1]{}
+%% \author{Name\corref{cor1}\fnref{label2}}
+%% \ead{email address}
+%% \ead[url]{home page}
+%% \fntext[label2]{}
+%% \cortext[cor1]{}
+%% \address{Address\fnref{label3}}
+%% \fntext[label3]{}
+
+%% use optional labels to link authors explicitly to addresses:
+%% \author[label1,label2]{<author name>}
+%% \address[label1]{<address>}
+%% \address[label2]{<address>}
+
+% \author{}
+
+% \begin{abstract}https://www.overleaf.com/project/5c620adaae33244d0a6b56ce
+%% Text of abstract
+% Suspendisse potenti. Suspendisse quis sem elit, et mattis nisl. Phasellus consequat erat eu velit rhoncus non pharetra neque auctor. Phasellus eu lacus quam. Ut ipsum dolor, euismod aliquam congue sed, lobortis et orci. Mauris eget velit id arcu ultricies auctor in eget dolor. Pellentesque suscipit adipiscing sem, imperdiet laoreet dolor elementum ut. Mauris condimentum est sed velit lacinia placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam diam metus, pharetra vitae euismod sed, placerat ultrices eros. Aliquam tincidunt dapibus venenatis. In interdum tellus nec justo accumsan aliquam. Nulla sit amet massa augue.
+% \end{abstract}
+
+% \begin{keyword}
+% % Science \sep Publication \sep Complicated
+% %% keywords here, in the form: keyword \sep keyword
+
+% %% MSC codes here, in the form: \MSC code \sep code
+% %% or \MSC[2008] code \sep code (2000 is the default)
+
+% \end{keyword}
+
+% \end{frontmatter}
+
+%%
+%% Start line numbering here if you want
+%%
+\linenumbers
+\subfile{data}
+\subfile{introducao}
+\subfile{abordagem}
+\subfile{metodologia}
+\subfile{resultados}
+% \subfile{conclusao}
+\subfile{referencias}
+
+
+% \begin{table}[H]
+% \caption{Valores médios reais e previstos para firmeza, SST e massa e seus respectivos erros.}\label{tbl:periodic}
+% \begin{tabular}{l |m{1cm}m{1cm}m{1cm}|m{1cm}m{1cm}m{1cm}|m{1cm}m{1cm}m{1cm}}
+% \multirow{2}{*}{Range} &	Firm &  SST & Massa &  Firm & SST &  Massa  &  Firm &  SST	 &  Massa \\ \cline{2-10}
+% & \multicolumn{3}{c|}{Real} & \multicolumn{3}{c}{Previsto} & \multicolumn{3}{|c}{Erro} \\ \hline
+% 20-35 	&	93,14 	&	4,75	& 	63,09 	&  	93,66 	& 	4,82 	&  62,78	& 	0,55\% & 	1,51\% & 	0,48\% 	\\ \hline
+% 36-50 	&	116,26 	&	5,08	& 	187,27 	&  	114,44 	& 	5,08 	&  174,76 	& 	1,59\% & 	0,07\% & 	7,16\% 	\\ \hline
+% 51-65 	&	123,83 	&	5,24	& 	299,53 	&  	123,90 	& 	5,27 	&  294,30 	& 	0,06\% & 	0,53\% & 	1,78\% 	\\ \hline
+% 66-80 	&	126,48 	&	5,79  	& 	438,42 	&  	125,69 	& 	5,46 	&  357,47 	& 	0,63\% & 	6,03\% & 	22,65\% \\ \hline
+% 81-95 	&	145,78 	&	5,44  	& 	503,41 	&  	133,72 	& 	5,65 	&  466,07 	& 	9,01\% & 	3,87\% & 	8,01\% 	\\ \hline
+% 96-110 	&	145,14 	&	5,77  	& 	520,19 	&  	142,21 	& 	5,65 	&  514,28 	& 	2,06\% & 	2,12\% & 	1,15\% 	\\ \hline
+% 111-125 &	148,99 	&	5,84	& 	536,56 	&  	137,96 	& 	6,04 	&  550,00 	& 	7,99\% & 	3,17\% & 	2,44\% 	\\ \hline
+% 126-140 &	138,84 	&	5,97	& 	573,75 	&  	140,63 	& 	6,16 	&  535,79 	& 	1,27\% & 	3,17\% & 	7,08\% 	\\ \hline
+% 141-155 &	140,87 	&	6,48  	& 	591,56 	&  	137,82 	& 	6,41 	&  579,69 	& 	2,21\% & 	1,09\% & 	2,05\% 	\\ \hline
+% 156-170 &	128,51 	&	6,81  	& 	586,66 	&  	119,23 	& 	7,23 	&  581,63 	& 	7,78\% & 	5,83\% & 	0,86\% 	\\ \hline
+% 171-180 &	28,92 	&	12,78	& 	463,89 	&  	39,90 	& 	12,00 	&  463,11 	& 	27,51\% & 	6,48\% & 	0,17\% 	\\ \hline
+% 181-190 &	5,99 	&	15,07	& 	422,62 	&  	7,21 	& 	14,95 	&  425,67 	& 	16,88\% & 	0,75\% & 	0,72\% 	\\ \hline
+% \hline
+% \end{tabular}
+% \end{table}
+
+% Reference to Section \ref{S:1}. Etiam congue sollicitudin diam non porttitor. Etiam turpis nulla, auctor a pretium non, luctus quis ipsum. Fusce pretium gravida libero non accumsan. Donec eget augue ut nulla placerat hendrerit ac ut mi. Phasellus euismod ornare mollis. Proin tempus fringilla ultricies. Donec pretium feugiat libero quis convallis. Nam interdum ante sed magna congue eu semper tellus sagittis. Curabitur eu augue elit.
+
+
+%% The Appendices part is started with the command \appendix;
+%% appendix sections are then done as normal sections
+%% \appendix
+
+%% \section{}
+%% \label{}
+
+%% References
+%%
+%% Following citation commands can be used in the body text:
+%% Usage of \cite is as follows:
+%%   \cite{key}          ==>>  [#]
+%%   \cite[chap. 2]{key} ==>>  [#, chap. 2]
+%%   \citet{key}         ==>>  Author [#]
+
+%% References with bibTeX database:
+
+% \bibliographystyle{model1-num-names}
+% \bibliography{sample.bib}
+
+%% Authors are advised to submit their bibtex database files. They are
+%% requested to list a bibtex style file in the manuscript if they do
+%% not want to use model1-num-names.bst.
+
+%% References without bibTeX database:
+
+% \begin{thebibliography}{00}
+
+%% \bibitem must have the following form:
+%%   \bibitem{key}...
+%%
+
+% \bibitem{}
+
+% \end{thebibliography}
+
+% \begin{landscape}
+% \begin{center}
+% 	\begin{table}[!htb]
+% 	\setlength{\tabcolsep}{5pt}
+% 	\tiny
+% 	\caption{\label{tab:artigos_att} Atributos extraídos pelos autores.}
+% 		\begin{tabular}{>{\centering}m{3.3cm} >{\centering}m{0.8cm} >{\centering}m{1.5cm} >{\centering}m{1cm} >{\centering}m{0.8cm} >{\centering}m{1cm} >{\centering}m{0.8cm} >{\centering}m{1cm} >{\centering}m{1cm}>{\centering}m{1cm}ccccccccccc}
+% 			\hline
+% 			Autores/Atributos & Média RGB & Diferença de médias e gradiente RGB & Taxas R/G, R/B e S/H & Média HSV & Canal HSV dominante & Média L*a*b* & Número de pixels & Variáveis fractais & Diâmetro & Atributo alvo\\ \hline
+% 			Teoh e Syaifudin (2007)						&   &   &   &   &   &   & X &   &   & Massa \\ \hline
+% 			Nandi, Tudu e Koley (2014)					&   & X &   &   &   &   &   &   &   & Apodrecimento \\ \hline 
+% 			Zheng e Lu (2012)							&   &   &   &   &   & X &   & X &   & Apodrecimento\\ \hline  
+% 			Khairunniza-Bejo e Kamarudin (2011)			&   &   &   & X &   &   &   &   &   & SST\\ \hline  
+% 			Yossy (2017)								&   &   &   &   & X &   &   &   &   & Maturação \\ \hline   
+% 			Vélez-Rivera (2014)							&   &   &   & X &   & X &   &   &   & Maturação \\ \hline  
+% 			Yahaya (2015)								& X &   &   &   &   &   &   &   &   & SST, acidez e firmeza\\ \hline  
+% 			Salunkhe (2015)								& X &   & X & X &   &   &   &   &   & Maturação \\ \hline  
+% 			Pandey (2014)								&   &   &   &   &   & X & X &   & X & Tamanho e doença\\ \hline   
+% 			Abarra (2018)								& X &   &   & X &   & X &   &   &   & SST, acidez e firmeza \\
+% 			\hline
+% 		\end{tabular}
+% 	\end{table}
+% 	\legend{\textbf{Fonte: } (Autor, 2019).}
+% \end{center}
+% \end{landscape}
+
+\end{document}
+
+%%
+%% End of file `elsarticle-template-1-num.tex'.
